@@ -379,7 +379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AZERTYUIOR
+  m_Text: 
 --- !u!222 &938365597
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -450,13 +450,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 45
-    m_Alignment: 5
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AZERTYUIOPQSDFGHJKLM
+  m_Text: AZERTYUIOP FGHJKLM
 --- !u!222 &1234300868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -623,6 +623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2120947217}
+  - component: {fileID: 2120947218}
   m_Layer: 0
   m_Name: TextManager
   m_TagString: Untagged
@@ -644,3 +645,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2120947218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120947216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5459df4edbc5e5e4e9096a154c507618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preText: {fileID: 1234300867}
+  wordInProduction: {fileID: 938365596}
+  keyPressed: 
+  punchLines:
+  - "Ta m\xE8re en slip."
+  - Mange tes grands morts.
+  - Nique la poiscailles.
+  - Regarde mon gros bigorneau.x
+  - chocolat paprika.
+  - efzegfdgreg.
+  - yeah Boy.
+  - Salope!
+  - Gabi sait pas faire de son.
+  - Victor est nul.
+  possibleEndOfPunchLines:
+  - .
+  - '!'
+  multiplicator: 1
+  multiplicatorSpeed: 0.25
+  pointForThePunchLines: 0
