@@ -17,6 +17,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     }
     protected void Awake()
     {
+        DontDestroyOnLoad(this);
         if (instance == null)
             instance = this as T;
         else if (instance != this)

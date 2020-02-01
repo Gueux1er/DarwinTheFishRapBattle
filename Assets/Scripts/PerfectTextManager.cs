@@ -49,11 +49,27 @@ public class PerfectTextManager : MonoBehaviour
         }
     }
 
+    void CleanAll()
+    {
+        for (int i =0; i< textToCheck.Length; i++)
+        {
+            for (int j=0; j < textToCheck[i].transform.childCount -1; j++)
+            {
+                textToCheck[i].transform.GetChild(j).GetComponent<Text>().text = textToCheck[i].transform.GetChild(j).name;
+            }
+        }
+        for (int i = 0; i < goodPart.Length; i++)
+        {
+            goodPart[i] = 0;
+        }
+    }
+
     void WhatToDo()
     {
         if (textSend == "Retry")
         {
-            movementCharacter.CombatSetup();
+            movementCharacter.CombatSetup(false);
+            CleanAll();
             textSend = "";
             this.gameObject.SetActive(false);
         }
