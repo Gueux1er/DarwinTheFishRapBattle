@@ -44,7 +44,7 @@ public class MovementCharacter : MonoBehaviour
         }
     }
 
-    void CombatSetup()
+    public void CombatSetup()
     {
         combatUI.SetActive(true);
     }
