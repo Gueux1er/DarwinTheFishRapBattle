@@ -958,6 +958,21 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0.95
       objectReference: {fileID: 0}
+    - target: {fileID: 5094083124218847114, guid: a4a5e9ae9b1e3d6459a639859733315a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094083124218847114, guid: a4a5e9ae9b1e3d6459a639859733315a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094083124218847114, guid: a4a5e9ae9b1e3d6459a639859733315a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4a5e9ae9b1e3d6459a639859733315a, type: 3}
 --- !u!1 &578612022 stripped
@@ -4729,6 +4744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvironmentManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181920362048931183, guid: a14a0da4802389a45bc0945b36874d4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2787675208645331940, guid: a14a0da4802389a45bc0945b36874d4f,
         type: 3}
