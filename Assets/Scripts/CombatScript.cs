@@ -9,7 +9,7 @@ using TMPro;
 public class CombatScript : MonoBehaviour
 {
     public GameObject onFightUI;
-
+    public GameObject avatarPos;
     [SerializeField] public Image slider;
     public PostProcessVolume volume;
     private ColorGrading colorGrading;
@@ -24,11 +24,13 @@ public class CombatScript : MonoBehaviour
 
     private void Start()
     {
+        
         slider.gameObject.SetActive(false);
         onFightUI.gameObject.SetActive(false);
     }
 
-    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay)
+
+    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay, bool changePosition)
     {
         slider.gameObject.SetActive(false);
         onFightUI.gameObject.SetActive(false);
@@ -42,15 +44,16 @@ public class CombatScript : MonoBehaviour
 
         colorGrading.postExposure.value = 0;
         DOTween.To(() => colorGrading.postExposure.value, x => colorGrading.postExposure.value = x, 10, 1.5f)
-            .OnComplete(FighterPresentation);
+            .OnComplete(() => FighterPresentation(changePosition));
     }
 
-    private void FighterPresentation()
+    private void FighterPresentation(bool changePosition)
     {
         newChallengerCanvasGroup.alpha = 0;
         newChallengerCanvasGroup.DOFade(1, 0.5f);
         newChallengerAnimator.Play(0);
-
+        if (changePosition == true)
+            avatarPos.transform.position += new Vector3(-5, 0, 0);
         DOVirtual.DelayedCall(5f, PlayFight);
     }
 
