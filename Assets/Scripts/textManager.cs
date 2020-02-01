@@ -20,6 +20,9 @@ public class textManager : Singleton<textManager>
 
     [SerializeField] CombatScript cS;
 
+    [SerializeField] GameObject victoryCanvas;
+    [SerializeField] GameObject looseCanvas;
+
     bool nextWord = false;
 
     // Start is called before the first frame update
@@ -47,6 +50,15 @@ public class textManager : Singleton<textManager>
     // Update is called once per frame
     void Update()
     {
+        if (cS.slider.fillAmount == 0)
+        {
+            YouLoose();
+        }else if (cS.slider.fillAmount == 1)
+        {
+            YouWin();
+        }
+
+
 
         if (Input.anyKeyDown)
             if (Input.inputString != "")
@@ -57,6 +69,18 @@ public class textManager : Singleton<textManager>
             WordFinish();
         }
 
+
+    }
+
+    void YouWin()
+    {
+
+    }
+    void YouLoose()
+    {
+        cS.slider.fillAmount = 0.5f;
+        cS.gameObject.SetActive(false);
+        looseCanvas.SetActive(true);
 
     }
 
