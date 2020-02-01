@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ChallengerStat : MonoBehaviour
 {
+    public string name;
+    public string flavorText;
+    public Sprite spriteToDisplay;
 
     public float powerFlow;
     // Start is called before the first frame update
