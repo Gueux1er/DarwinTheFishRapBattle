@@ -22,7 +22,7 @@ public class ExcelLecteur : MonoBehaviour
         TextAsset PunchlinesTheCar = Resources.Load<TextAsset>("theCarPunchLines");
         theCarPunchLines = PunchlinesTheCar.text.Split(new char[] { '\n' });
 
-        TextAsset darwinPunchLinesLector = Resources.Load<TextAsset>("KaariscargotPunchlines");
+        TextAsset darwinPunchLinesLector = Resources.Load<TextAsset>("darwinPunchLines");
         darwinPunchLines = darwinPunchLinesLector.text.Split(new char[] { '\n' });
     }
 

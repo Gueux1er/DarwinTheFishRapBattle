@@ -34,7 +34,7 @@ public class textManager : Singleton<textManager>
             if (preText.text.Length < 25)
             {
                 preText.text += " " + punchLines[count = Random.Range(0, punchLines.Count - 1)];
-                punchLines.RemoveAt(count);
+                //punchLines.RemoveAt(count);
             }
             else
             {
@@ -78,7 +78,7 @@ public class textManager : Singleton<textManager>
     }
     void YouLoose()
     {
-        cS.slider.fillAmount = 0.5f;
+        cS.slider.fillAmount = 0.95f;
         cS.gameObject.SetActive(false);
         looseCanvas.SetActive(true);
 
@@ -136,7 +136,7 @@ public class textManager : Singleton<textManager>
         if (preText.text.Length < 25)
         {
             preText.text += " " + punchLines[count = Random.Range(0, punchLines.Count - 1)];
-            punchLines.RemoveAt(count);
+            //punchLines.RemoveAt(count);
         }
     }
 
