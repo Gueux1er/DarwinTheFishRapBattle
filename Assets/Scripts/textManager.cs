@@ -16,12 +16,14 @@ public class textManager : Singleton<textManager>
     int count;
     [SerializeField] float multiplicator = 1;
     [SerializeField] float multiplicatorSpeed = 0.25f;
-    [SerializeField] float pointForThePunchLines;
+    [SerializeField] float basePoints;
+
+    [SerializeField] CombatScript cS;
 
     bool nextWord = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         preText.text = null;
         while (true)
@@ -45,6 +47,7 @@ public class textManager : Singleton<textManager>
     // Update is called once per frame
     void Update()
     {
+
         if (Input.anyKeyDown)
             if (Input.inputString != "")
                 CompareKeyPressedToText(Input.inputString);
@@ -83,16 +86,16 @@ public class textManager : Singleton<textManager>
         if (keyPressed.ToLower()[0] == preText.text.ToLower()[0])
         {
             CheckForEndOfPunchLines();
-            wordInProduction.text += "<color=green>" + keyPressed[0] + "</color>".ToUpper();
-            wordInProduction.text = wordInProduction.text.ToUpper();
+            wordInProduction.text += "<color=green>" + preText.text[0] + "</color>";
             preText.text = preText.text.Substring(1);
             nextWord = false;
             multiplicator += multiplicatorSpeed;
+            cS.slider.fillAmount += basePoints * multiplicator;
         }
         else
         {
             wordInProduction.text += "<color=red>" + preText.text[0] + "</color>".ToUpper();
-            wordInProduction.text = wordInProduction.text.ToUpper();
+            wordInProduction.text = wordInProduction.text;
             preText.text = preText.text.Substring(1);
             nextWord = false;
             multiplicator = 1;
