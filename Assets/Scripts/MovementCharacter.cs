@@ -31,11 +31,12 @@ public class MovementCharacter : MonoBehaviour
         else
         {
             cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f;
+            cS.handleSlider.value -= challengerInfos.powerFlow * 0.001f;
         }
         if (this.transform.position.x > 30f)
         {
             canMove = false;
-            this.transform.position = new Vector3(-25, this.transform.position.y, this.transform.position.z); ;
+            this.transform.position = new Vector3(-25, this.transform.position.y, this.transform.position.z);
             LevelManager.Instance.level += 1;
             LevelManager.Instance.EndFade();
         }

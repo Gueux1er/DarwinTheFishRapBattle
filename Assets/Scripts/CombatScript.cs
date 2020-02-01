@@ -10,13 +10,15 @@ public class CombatScript : MonoBehaviour
 {
     public GameObject onFightUI;
     public GameObject avatarPos;
-    [SerializeField] public Image slider;
+    public Image slider;
+    public Slider handleSlider;
     public PostProcessVolume volume;
     private ColorGrading colorGrading;
 
     public CanvasGroup newChallengerCanvasGroup;
     public Animator newChallengerAnimator;
 
+    public TextMeshProUGUI challengerNameLifeText;
     public TextMeshProUGUI challengerNameText;
     public TextMeshProUGUI challengerFlavorText;
 
@@ -35,6 +37,7 @@ public class CombatScript : MonoBehaviour
         slider.gameObject.SetActive(false);
         onFightUI.gameObject.SetActive(false);
 
+        challengerNameLifeText.text = challengerName;
         challengerNameText.text = challengerName;
         challengerFlavorText.text = challengerFlavor;
 

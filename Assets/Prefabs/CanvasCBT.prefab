@@ -809,7 +809,7 @@ Canvas:
   m_GameObject: {fileID: 3550799508635930039}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -873,10 +873,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onFightUI: {fileID: 443166655302511534}
+  avatarPos: {fileID: 0}
   slider: {fileID: 3550799508701362467}
+  handleSlider: {fileID: 7120338850081937062}
   volume: {fileID: 0}
   newChallengerCanvasGroup: {fileID: 578612025}
   newChallengerAnimator: {fileID: 2013329348504050380}
+  challengerNameLifeText: {fileID: 2173102273028361457}
   challengerNameText: {fileID: 5033015499481743854}
   challengerFlavorText: {fileID: 5548382608615710288}
   challengerImage: {fileID: 1020462437079004834}

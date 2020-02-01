@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: e29022b3c5f7da342a3a654301e14f33
+guid: bfb9cc4865945c84f8024145ff2f2d4c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7056509154416059478
+    second: Kaariscargot_0
+  - first:
+      213: 1543109941352946979
+    second: Kaariscargot_1
+  - first:
+      213: 3484580129833033007
+    second: Kaariscargot_2
+  - first:
+      213: 7040294704387593342
+    second: Kaariscargot_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,11 +108,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kaariscargot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1791.25
+        height: 1800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbdb1942ee45c54889398ec2468d9ae
+      internalID: 7056509154416059478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kaariscargot_1
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 0
+        width: 1791.25
+        height: 1800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e09b552ea3c1594394bfe97d431fa63
+      internalID: 1543109941352946979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kaariscargot_2
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 0
+        width: 1791.25
+        height: 1800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471a3fab3ea7d6740b2a494416a3da14
+      internalID: 3484580129833033007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kaariscargot_3
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 0
+        width: 1791.25
+        height: 1800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a0b8ae69f34f7419b67ca76f7717da
+      internalID: 7040294704387593342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 00a75c365dfa21b45bd6f35a31d72c22
     internalID: 0
     vertices: []
     indices: 
