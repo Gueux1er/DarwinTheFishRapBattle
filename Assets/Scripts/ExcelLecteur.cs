@@ -16,14 +16,14 @@ public class ExcelLecteur : MonoBehaviour
         TextAsset PunchlinesKaaris = Resources.Load<TextAsset>("KaariscargotPunchlines");
         kaariscargotPunchlines = PunchlinesKaaris.text.Split(new char[] { '\n' });
 
-        TextAsset PunchlinesCarpenter = Resources.Load<TextAsset>("KaariscargotPunchlines");
-        kaariscargotPunchlines = PunchlinesCarpenter.text.Split(new char[] { '\n' });
+        TextAsset PunchlinesCarpenter = Resources.Load<TextAsset>("CarpenterSlugPunchlines");
+        carpenterSlugPunchlines = PunchlinesCarpenter.text.Split(new char[] { '\n' });
 
-        TextAsset PunchlinesTheCar = Resources.Load<TextAsset>("KaariscargotPunchlines");
-        kaariscargotPunchlines = PunchlinesTheCar.text.Split(new char[] { '\n' });
+        TextAsset PunchlinesTheCar = Resources.Load<TextAsset>("theCarPunchLines");
+        theCarPunchLines = PunchlinesTheCar.text.Split(new char[] { '\n' });
 
-        TextAsset darwinPunchLines = Resources.Load<TextAsset>("KaariscargotPunchlines");
-        kaariscargotPunchlines = darwinPunchLines.text.Split(new char[] { '\n' });
+        TextAsset darwinPunchLinesLector = Resources.Load<TextAsset>("KaariscargotPunchlines");
+        darwinPunchLines = darwinPunchLinesLector.text.Split(new char[] { '\n' });
     }
 
     // Update is called once per frame
