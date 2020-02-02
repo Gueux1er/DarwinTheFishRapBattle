@@ -11,21 +11,34 @@ public class ChallengerStat : MonoBehaviour
     public string flavorText;
     public Sprite spriteToDisplay;
 
+    public bool interrupt;
+
     [EventRef]
     public string musicSound;
     public EventInstance musicSoundInstance;
 
-
     public float powerFlow;
-    // Start is called before the first frame update
-    void Start()
+
+    [Header("For CAR")]
+    public GameObject entryCarObject;
+    public GameObject idleCarObject;
+
+    public void OnEnable()
     {
-        
+        if (idleCarObject != null)
+            idleCarObject.SetActive(false);
+    }
+    
+    public void Fight()
+    {
+        if (entryCarObject != null)
+            entryCarObject.SetActive(false);
+        if (idleCarObject != null)
+            idleCarObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Die()
     {
-        
+
     }
 }

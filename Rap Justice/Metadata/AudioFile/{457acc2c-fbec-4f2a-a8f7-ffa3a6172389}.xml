@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{457acc2c-fbec-4f2a-a8f7-ffa3a6172389}">
+        <property name="assetPath">
+            <value>Crumbling-Mike_Koenig-1123041125.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.6592291666666668</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{6d8da444-2648-4911-90d4-4cf460d3d809}</destination>
+        </relationship>
+    </object>
+</objects>
