@@ -81,7 +81,7 @@ public class PerfectTextManager : MonoBehaviour
             Application.Quit();
         }else if (textSend == "PRESS START")
         {
-            print("Lanch other");
+            print("Launch other");
             SceneManager.LoadScene(1);
         }
 
