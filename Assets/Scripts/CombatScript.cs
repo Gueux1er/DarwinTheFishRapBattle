@@ -8,6 +8,7 @@ using TMPro;
 
 public class CombatScript : MonoBehaviour
 {
+
     public GameObject onFightUI;
     public GameObject avatarPos;
     public Image slider;
@@ -24,6 +25,8 @@ public class CombatScript : MonoBehaviour
 
     public Image challengerImage;
 
+    private ChallengerStat currentChallenger;
+
     private void Start()
     {
         
@@ -32,8 +35,10 @@ public class CombatScript : MonoBehaviour
     }
 
 
-    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay, bool changePosition)
+    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay, bool changePosition, ChallengerStat challengerInfos)
     {
+        currentChallenger = challengerInfos;
+
         slider.gameObject.SetActive(false);
         onFightUI.gameObject.SetActive(false);
 
@@ -69,6 +74,8 @@ public class CombatScript : MonoBehaviour
                 MovementCharacter.Instance.inFight = true;
                 onFightUI.gameObject.SetActive(true);
                 slider.gameObject.SetActive(true);
+
+                currentChallenger.musicSoundInstance.start();
             });
     }
 }

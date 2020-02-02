@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d64d6beaae7e984380be8027945b73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 0
   fadeCanvas: {fileID: 976954751}
 --- !u!4 &22809708
 Transform:
@@ -1708,6 +1708,7 @@ MonoBehaviour:
   flavorText: LE CHARPENTIER QUI BRUTALISE LA MER
   spriteToDisplay: {fileID: -9055229215069550697, guid: 695c55ada21236b40a2894671a49ce8e,
     type: 3}
+  musicSound: event:/Musiques/Carpenter Slug
   powerFlow: 3
 --- !u!65 &672920141
 BoxCollider:
@@ -1730,7 +1731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672920139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.136154, y: -2.9900322, z: -1.29706}
+  m_LocalPosition: {x: 3.5, y: -2.9900322, z: -1.29706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325557340}
@@ -2906,6 +2907,7 @@ MonoBehaviour:
   - {fileID: 2127296889}
   - {fileID: 672920140}
   - {fileID: 1871808869}
+  currentChallenger: {fileID: 0}
 --- !u!43 &1088282152
 Mesh:
   m_ObjectHideFlags: 0
@@ -4542,6 +4544,8 @@ MonoBehaviour:
   inFight: 0
   prepareFight: 0
   canMove: 0
+  newChallengerSound: event:/Effets sonores/Challenger
+  questionsSound: 
 --- !u!54 &1777396709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4832,7 +4836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871808867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.136154, y: -2.9900322, z: -1.29706}
+  m_LocalPosition: {x: 3.5, y: -2.9900322, z: -1.29706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 530932989}
@@ -4855,6 +4859,7 @@ MonoBehaviour:
   flavorText: BERNARD BACK FROM THE DEAD
   spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
     type: 3}
+  musicSound: event:/Musiques/Bernard
   powerFlow: 6
 --- !u!65 &1871808870
 BoxCollider:
@@ -4950,6 +4955,7 @@ MonoBehaviour:
   flavorText: SEVRAN DEBARQUE A LA MER
   spriteToDisplay: {fileID: 1543109941352946979, guid: bfb9cc4865945c84f8024145ff2f2d4c,
     type: 3}
+  musicSound: event:/Musiques/Karriscargot
   powerFlow: 1
 --- !u!65 &2127296890
 BoxCollider:
@@ -4972,7 +4978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127296888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.136154, y: -2.9900322, z: -1.29706}
+  m_LocalPosition: {x: 3.5, y: -2.9900322, z: -1.29706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 379298381}
@@ -5031,6 +5037,8 @@ MonoBehaviour:
   cS: {fileID: 578612023}
   victoryCanvas: {fileID: 0}
   looseCanvas: {fileID: 969397558}
+  validSound: event:/Effets sonores/Keyboard
+  errorSound: event:/Effets sonores/Error
 --- !u!4 &2146732192
 Transform:
   m_ObjectHideFlags: 0
@@ -5202,6 +5210,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1797624785}
+    - target: {fileID: 7139088576577150057, guid: a14a0da4802389a45bc0945b36874d4f,
+        type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139088576577150057, guid: a14a0da4802389a45bc0945b36874d4f,
+        type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139088576577150057, guid: a14a0da4802389a45bc0945b36874d4f,
+        type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7277196356461100459, guid: a14a0da4802389a45bc0945b36874d4f,
         type: 3}
       propertyPath: m_Mesh

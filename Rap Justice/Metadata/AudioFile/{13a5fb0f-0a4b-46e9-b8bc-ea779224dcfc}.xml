@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{13a5fb0f-0a4b-46e9-b8bc-ea779224dcfc}">
+        <property name="assetPath">
+            <value>Ta mere en slip - feat toi.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>169.43934240362813</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{6d8da444-2648-4911-90d4-4cf460d3d809}</destination>
+        </relationship>
+    </object>
+</objects>

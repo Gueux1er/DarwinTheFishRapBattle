@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class ChallengerManager : MonoBehaviour
 {
+    public static ChallengerManager Instance;
+
     public List<ChallengerStat> challengers;
+    public ChallengerStat currentChallenger;
 
     public void Start()
     {
+        Instance = this;
+
         for (int i = 0; i < challengers.Count; ++i)
         {
             challengers[i].gameObject.SetActive(false);
         }
 
-        challengers[LevelManager.Instance.level].gameObject.SetActive(true);
+        currentChallenger = challengers[LevelManager.Instance.level];
+        currentChallenger.gameObject.SetActive(true);
     }
 }

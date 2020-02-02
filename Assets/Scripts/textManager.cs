@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
+using EventInstance = FMOD.Studio.EventInstance;
+using RuntimeManager = FMODUnity.RuntimeManager;
 
 public class textManager : Singleton<textManager>
 {
@@ -23,11 +26,22 @@ public class textManager : Singleton<textManager>
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject looseCanvas;
 
+    [EventRef]
+    public string validSound;
+    [EventRef]
+    public string errorSound;
+
+    private EventInstance validSoundInstance;
+    private EventInstance errorSoundInstance;
+
     bool nextWord = false;
 
     // Start is called before the first frame update
     void Awake()
     {
+        validSoundInstance = RuntimeManager.CreateInstance(validSound);
+        errorSoundInstance = RuntimeManager.CreateInstance(errorSound);
+
         preText.text = null;
         while (true)
         {
@@ -41,8 +55,6 @@ public class textManager : Singleton<textManager>
                 return;
             }
         }
-
-        
     }
 
     
@@ -68,20 +80,20 @@ public class textManager : Singleton<textManager>
         {
             WordFinish();
         }
-
-
     }
 
     void YouWin()
     {
+        ChallengerManager.Instance.currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
+        MovementCharacter.Instance.StartSoundQuestion();
     }
+
     void YouLoose()
     {
         cS.slider.fillAmount = 0.95f;
         cS.gameObject.SetActive(false);
         looseCanvas.SetActive(true);
-
     }
 
     void CheckForEndOfPunchLines()
@@ -116,6 +128,7 @@ public class textManager : Singleton<textManager>
             multiplicator += multiplicatorSpeed;
             cS.slider.fillAmount += basePoints * multiplicator;
             cS.handleSlider.value += basePoints * multiplicator;
+            validSoundInstance.start();
         }
         else
         {
@@ -124,12 +137,10 @@ public class textManager : Singleton<textManager>
             preText.text = preText.text.Substring(1);
             nextWord = false;
             multiplicator = 1;
+            errorSoundInstance.start();
         }
 
-
-
         CheckForLenghtOfText();
-
     }
 
     void CheckForLenghtOfText()

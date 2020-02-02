@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using EventInstance = FMOD.Studio.EventInstance;
+using RuntimeManager = FMODUnity.RuntimeManager;
 
 public class MovementCharacter : MonoBehaviour
 {
@@ -14,10 +17,24 @@ public class MovementCharacter : MonoBehaviour
     [HideInInspector] public bool inFight = false;
     [HideInInspector] public bool prepareFight = false;
     [HideInInspector] public bool canMove = false;
+
+    [EventRef]
+    public string newChallengerSound;
+    [EventRef]
+    public string questionsSound;
+
+    private EventInstance newChallengerSoundInstance;
+    private EventInstance questionsSoundInstance;
+
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
+
+        newChallengerSoundInstance = RuntimeManager.CreateInstance(newChallengerSound);
+        questionsSoundInstance = RuntimeManager.CreateInstance(questionsSound);
+
+        StartSoundQuestion();
     }
 
     // Update is called once per frame
@@ -32,6 +49,8 @@ public class MovementCharacter : MonoBehaviour
         {
             cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f;
             cS.handleSlider.value -= challengerInfos.powerFlow * 0.001f;
+
+            ChallengerManager.Instance.currentChallenger.musicSoundInstance.setParameterValue("Parameter 1", cS.handleSlider.value);
         }
         if (this.transform.position.x > 30f)
         {
@@ -53,16 +72,28 @@ public class MovementCharacter : MonoBehaviour
         {
             prepareFight = true;
 
-            print("Fight");
-
             challengerInfos = collision.transform.GetComponent<ChallengerStat>();
             CombatSetup(true);
+
+            newChallengerSoundInstance.start();
+
+            StopSoundQuestion();
         }
     }
 
     public void CombatSetup(bool changePosition)
     {
         combatUI.SetActive(true);
-        cS.StartFight(challengerInfos.name, challengerInfos.flavorText, challengerInfos.spriteToDisplay,changePosition);
+        cS.StartFight(challengerInfos.name, challengerInfos.flavorText, challengerInfos.spriteToDisplay,changePosition, challengerInfos);
+    }
+
+    public void StartSoundQuestion()
+    {
+        questionsSoundInstance.start();
+    }
+
+    public void StopSoundQuestion()
+    {
+        questionsSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
