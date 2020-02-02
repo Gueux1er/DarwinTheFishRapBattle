@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7237641157860442325}
   - component: {fileID: 7237641157860442326}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Darwin Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7237641157860442323}
-  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: 0.076196216, y: -0.7029894, z: 0.07619621, w: 0.70298946}
+  m_LocalPosition: {x: 0.021, y: 0.702, z: -0}
   m_LocalScale: {x: 0.21533723, y: 0.21533723, z: 0.21533723}
   m_Children: []
   m_Father: {fileID: 7237641158566562633}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.372001, y: -90.00001, z: 0}
 --- !u!212 &7237641157860442325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 7237641157860442323}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12ee035547ae2c443a7915f18a55c699, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ece2de794f6368479288c24fa08cfba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,8 +110,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7237641158566562633}
-  - component: {fileID: 7237641158566562632}
-  - component: {fileID: 7237641158566562631}
   - component: {fileID: 7237641158566562630}
   - component: {fileID: 7237641158566562629}
   - component: {fileID: 7237641158566562628}
@@ -137,52 +135,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!33 &7237641158566562632
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7237641158566562627}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7237641158566562631
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7237641158566562627}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!65 &7237641158566562630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230,5 +182,6 @@ MonoBehaviour:
   inFight: 0
   prepareFight: 0
   canMove: 0
+  animator: {fileID: 7237641157860442326}
   newChallengerSound: event:/Effets sonores/Challenger
   questionsSound: event:/Effets sonores/QUESTIONS ET MEME
