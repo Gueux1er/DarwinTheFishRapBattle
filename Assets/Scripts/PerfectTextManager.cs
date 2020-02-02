@@ -83,6 +83,10 @@ public class PerfectTextManager : MonoBehaviour
         {
             print("Launch other");
             SceneManager.LoadScene(1);
+        }else if (textSend == "Fin")
+        {
+            print("quit");
+            Application.Quit();
         }
 
 
