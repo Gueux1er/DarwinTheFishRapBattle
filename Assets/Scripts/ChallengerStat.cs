@@ -23,6 +23,11 @@ public class ChallengerStat : MonoBehaviour
     public GameObject entryCarObject;
     public GameObject idleCarObject;
 
+    private void Awake()
+    {
+        musicSoundInstance = RuntimeManager.CreateInstance(musicSound);
+    }
+
     public void OnEnable()
     {
         if (idleCarObject != null)

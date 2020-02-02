@@ -8,12 +8,14 @@ using RuntimeManager = FMODUnity.RuntimeManager;
 
 public class textManager : Singleton<textManager>
 {
+    bool godMode = false;
+
     [SerializeField] Text preText;
     [SerializeField] Text wordInProduction;
 
     [SerializeField] string keyPressed;
 
-    [SerializeField] List<string> punchLines = new List<string>();
+    //[SerializeField] List<string> punchLines = new List<string>();
     [SerializeField] List<string> possibleEndOfPunchLines = new List<string>();
 
     int count;
@@ -22,6 +24,7 @@ public class textManager : Singleton<textManager>
     [SerializeField] float basePoints;
 
     [SerializeField] CombatScript cS;
+    [SerializeField] ExcelLecteur eL;
 
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject looseCanvas;
@@ -37,22 +40,23 @@ public class textManager : Singleton<textManager>
     bool nextWord = false;
 
     // Start is called before the first frame update
-    void Awake()
+    IEnumerator Start()
     {
         validSoundInstance = RuntimeManager.CreateInstance(validSound);
         errorSoundInstance = RuntimeManager.CreateInstance(errorSound);
 
         preText.text = null;
+        new WaitForEndOfFrame();
         while (true)
         {
             if (preText.text.Length < 25)
             {
-                preText.text += " " + punchLines[count = Random.Range(0, punchLines.Count - 1)];
+                preText.text += " " + eL.darwinPunchLines[Random.Range(0, eL.darwinPunchLines.Length - 1)];
                 //punchLines.RemoveAt(count);
             }
             else
             {
-                return;
+                return null;
             }
         }
     }
@@ -98,7 +102,7 @@ public class textManager : Singleton<textManager>
 
     void CheckForEndOfPunchLines()
     {
-        for (int i =0; i < possibleEndOfPunchLines.Count -1; i++)
+        for (int i =0; i < possibleEndOfPunchLines.Count; i++)
         {
             if (possibleEndOfPunchLines[i][0] == preText.text.ToLower()[0])
             {
@@ -115,11 +119,16 @@ public class textManager : Singleton<textManager>
 
     void CompareKeyPressedToText(string keyPressed)
     {
+        if (keyPressed == "²")
+        {
+            godMode = !godMode;
+            print("GodMode : " + godMode);
+        }
         if (keyPressed[0] == " "[0] && nextWord == true)
         {
             return;
         }
-        if (keyPressed.ToLower()[0] == preText.text.ToLower()[0])
+        if (keyPressed.ToLower()[0] == preText.text.ToLower()[0] || godMode == true)
         {
             CheckForEndOfPunchLines();
             wordInProduction.text += "<color=green>" + preText.text[0] + "</color>";
@@ -140,14 +149,19 @@ public class textManager : Singleton<textManager>
             errorSoundInstance.start();
         }
 
+        if (multiplicator > 2)
+        {
+            multiplicator = 2f;
+        }
+
         CheckForLenghtOfText();
     }
 
     void CheckForLenghtOfText()
     {
-        if (preText.text.Length < 25)
+        if (preText.text.Length < 35)
         {
-            preText.text += " " + punchLines[count = Random.Range(0, punchLines.Count - 1)];
+            preText.text += " " + eL.darwinPunchLines[Random.Range(0, eL.darwinPunchLines.Length - 1)];
             //punchLines.RemoveAt(count);
         }
     }

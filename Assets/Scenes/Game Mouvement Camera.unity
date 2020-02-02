@@ -2414,6 +2414,7 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2576,6 +2577,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1777396713}
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &969397558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5142753339550403305, guid: 7c6e97c91cf48774d92c347d9b212421,
@@ -4545,7 +4559,7 @@ MonoBehaviour:
   prepareFight: 0
   canMove: 0
   newChallengerSound: event:/Effets sonores/Challenger
-  questionsSound: 
+  questionsSound: event:/Effets sonores/QUESTIONS ET MEME
 --- !u!54 &1777396709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5017,24 +5031,14 @@ MonoBehaviour:
   preText: {fileID: 844989239}
   wordInProduction: {fileID: 1804022934}
   keyPressed: 
-  punchLines:
-  - "Ta m\xE8re en slip."
-  - Mange tes grands morts.
-  - Nique la poiscailles.
-  - Regarde mon gros bigorneau.
-  - chocolat paprika.
-  - efzegfdgreg.
-  - yeah Boy.
-  - Salope!
-  - Gabi sait pas faire de son.
-  - Victor est nul.
   possibleEndOfPunchLines:
   - .
   - '!'
   multiplicator: 1
-  multiplicatorSpeed: 0.25
+  multiplicatorSpeed: 0.1
   basePoints: 0.02
   cS: {fileID: 578612023}
+  eL: {fileID: 1972133402}
   victoryCanvas: {fileID: 0}
   looseCanvas: {fileID: 969397558}
   validSound: event:/Effets sonores/Keyboard

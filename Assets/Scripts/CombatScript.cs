@@ -25,8 +25,6 @@ public class CombatScript : MonoBehaviour
 
     public Image challengerImage;
 
-    private ChallengerStat currentChallenger;
-
     private void Start()
     {
         
@@ -35,10 +33,8 @@ public class CombatScript : MonoBehaviour
     }
 
 
-    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay, bool changePosition, ChallengerStat challengerInfos)
+    public void StartFight(string challengerName, string challengerFlavor, Sprite spriteToDisplay, bool changePosition)
     {
-        currentChallenger = challengerInfos;
-
         slider.gameObject.SetActive(false);
         onFightUI.gameObject.SetActive(false);
 
@@ -57,12 +53,14 @@ public class CombatScript : MonoBehaviour
 
     private void FighterPresentation(bool changePosition)
     {
+        MovementCharacter.Instance.newChallengerSoundInstance.start();
+
         newChallengerCanvasGroup.alpha = 0;
         newChallengerCanvasGroup.DOFade(1, 0.5f);
         newChallengerAnimator.Play(0);
         if (changePosition == true)
             avatarPos.transform.position += new Vector3(-5, 0, 0);
-        DOVirtual.DelayedCall(5f, PlayFight);
+        DOVirtual.DelayedCall(6.5f, PlayFight);
     }
 
     private void PlayFight()
@@ -79,7 +77,7 @@ public class CombatScript : MonoBehaviour
                 onFightUI.gameObject.SetActive(true);
                 slider.gameObject.SetActive(true);
 
-                currentChallenger.musicSoundInstance.start();
+                ChallengerManager.Instance.currentChallenger.musicSoundInstance.start();
             });
     }
 }
