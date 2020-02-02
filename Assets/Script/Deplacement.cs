@@ -108,8 +108,10 @@ public class Deplacement : MonoBehaviour {
 
 		animator.speed = velocityX * 0.1f;
 
-		if (Input.GetKeyDown (KeyCode.R)) {
+		if (Input.GetKeyDown (KeyCode.R))
+		{
 			SceneManager.LoadScene (0);
+			ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
 
 		oneframe = false;

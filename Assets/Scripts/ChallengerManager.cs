@@ -41,6 +41,7 @@ public class ChallengerManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene(2);
+            MovementCharacter.Instance.StopSoundQuestion();
         }
 
         wallSoundInstance = RuntimeManager.CreateInstance(wallSound);
