@@ -5,6 +5,7 @@ using FMODUnity;
 using EventInstance = FMOD.Studio.EventInstance;
 using RuntimeManager = FMODUnity.RuntimeManager;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ChallengerManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class ChallengerManager : MonoBehaviour
 
     public ChallengerStat carChallenger;
 
+    public List<TextMeshPro> punchlinesText;
+
     [EventRef]
     public string wallSound;
     public EventInstance wallSoundInstance;
@@ -22,6 +25,8 @@ public class ChallengerManager : MonoBehaviour
     public void Start()
     {
         Instance = this;
+
+        carChallenger.gameObject.SetActive(false);
 
         for (int i = 0; i < challengers.Count; ++i)
         {
@@ -36,6 +41,7 @@ public class ChallengerManager : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+
         wallSoundInstance = RuntimeManager.CreateInstance(wallSound);
     }
 
@@ -45,6 +51,20 @@ public class ChallengerManager : MonoBehaviour
         {
             StartCoroutine(TimerInterruption());
         }
+    }
+
+    public void DisableOnCatchlines()
+    {
+        for(int i = 0; i < punchlinesText.Count; ++i)
+        {
+            punchlinesText[i].text = string.Empty;
+        }
+    }
+
+    public void EnableOneCatchline()
+    {
+        punchlinesText[Random.Range(0, punchlinesText.Count)].text =
+            ExcelLecteur.Instance.currentPunchLines[Random.Range(0, ExcelLecteur.Instance.currentPunchLines.Length)];
     }
 
     IEnumerator TimerInterruption()

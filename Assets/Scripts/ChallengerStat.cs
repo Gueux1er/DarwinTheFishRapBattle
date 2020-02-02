@@ -47,10 +47,27 @@ public class ChallengerStat : MonoBehaviour
             entryCarObject.SetActive(false);
         if (idleCarObject != null)
             idleCarObject.SetActive(true);
+
+        StartCoroutine(CatchlinesCoco());
+    }
+
+    IEnumerator CatchlinesCoco()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(3f);
+
+            ChallengerManager.Instance.DisableOnCatchlines();
+            ChallengerManager.Instance.EnableOneCatchline();
+        }
     }
 
     public void Die()
     {
+        ChallengerManager.Instance.DisableOnCatchlines();
+
+        StopCoroutine(CatchlinesCoco());
+
         dieSoundInstance.start();
         Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
 
