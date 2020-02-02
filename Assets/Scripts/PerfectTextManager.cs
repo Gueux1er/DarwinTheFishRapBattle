@@ -14,6 +14,7 @@ public class PerfectTextManager : MonoBehaviour
     [SerializeField] string textSend;
 
     [SerializeField] MovementCharacter movementCharacter;
+    [SerializeField] CombatScript cS;
 
     // Start is called before the first frame update
     void Start()
@@ -71,10 +72,7 @@ public class PerfectTextManager : MonoBehaviour
     {
         if (textSend == "Retry")
         {
-            movementCharacter.CombatSetup(false);
-            CleanAll();
-            textSend = "";
-            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(1);
         }
         else if (textSend == "Abandon")
         {
