@@ -89,6 +89,7 @@ public class textManager : Singleton<textManager>
     void YouWin()
     {
         ChallengerManager.Instance.currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ChallengerManager.Instance.currentChallenger.Die();
 
         MovementCharacter.Instance.StartSoundQuestion();
     }

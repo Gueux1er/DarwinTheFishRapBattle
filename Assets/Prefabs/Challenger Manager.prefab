@@ -62,8 +62,11 @@ MonoBehaviour:
   flavorText: SEVRAN DEBARQUE A LA MER
   spriteToDisplay: {fileID: 1543109941352946979, guid: bfb9cc4865945c84f8024145ff2f2d4c,
     type: 3}
+  explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
+    type: 3}
   interrupt: 0
   musicSound: event:/Musiques/Karriscargot
+  dieSound: event:/Effets sonores/WIN
   powerFlow: 1
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
@@ -129,8 +132,11 @@ MonoBehaviour:
   flavorText: BERNARD BACK FROM THE DEAD
   spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
     type: 3}
+  explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
+    type: 3}
   interrupt: 1
   musicSound: event:/Musiques/Bernard
+  dieSound: event:/Effets sonores/WIN
   powerFlow: 6
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
@@ -490,6 +496,7 @@ MonoBehaviour:
   - {fileID: 1116702329702656729}
   currentChallenger: {fileID: 0}
   carChallenger: {fileID: 229290274080255399}
+  wallSound: event:/Effets sonores/MUR
 --- !u!1 &1116702330852299255
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,8 +559,11 @@ MonoBehaviour:
   flavorText: LE CHARPENTIER QUI BRUTALISE LA MER
   spriteToDisplay: {fileID: -9055229215069550697, guid: 695c55ada21236b40a2894671a49ce8e,
     type: 3}
+  explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
+    type: 3}
   interrupt: 0
   musicSound: event:/Musiques/Carpenter Slug
+  dieSound: event:/Effets sonores/WIN
   powerFlow: 3
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
@@ -620,8 +630,11 @@ MonoBehaviour:
   flavorText: '*VAHOOOOOUUUUUUUMMM*'
   spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
     type: 3}
+  explosionParticlePrefab: {fileID: 8821392633916896886, guid: e4babdeac0c7d0b4d98497a1455fdf3a,
+    type: 3}
   interrupt: 0
   musicSound: event:/Musiques/THE CAR
+  dieSound: event:/Effets sonores/WIN
   powerFlow: 9
   entryCarObject: {fileID: 3952455007797080713}
   idleCarObject: {fileID: 1091268798885635624}

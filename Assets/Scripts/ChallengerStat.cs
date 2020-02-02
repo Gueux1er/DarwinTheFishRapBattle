@@ -11,11 +11,17 @@ public class ChallengerStat : MonoBehaviour
     public string flavorText;
     public Sprite spriteToDisplay;
 
+    public GameObject explosionParticlePrefab;
+
     public bool interrupt;
 
     [EventRef]
     public string musicSound;
+    [EventRef]
+    public string dieSound;
+
     public EventInstance musicSoundInstance;
+    public EventInstance dieSoundInstance;
 
     public float powerFlow;
 
@@ -26,6 +32,7 @@ public class ChallengerStat : MonoBehaviour
     private void Awake()
     {
         musicSoundInstance = RuntimeManager.CreateInstance(musicSound);
+        dieSoundInstance = RuntimeManager.CreateInstance(dieSound);
     }
 
     public void OnEnable()
@@ -44,6 +51,9 @@ public class ChallengerStat : MonoBehaviour
 
     public void Die()
     {
+        dieSoundInstance.start();
+        Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
 
+        Destroy(gameObject, 0.2f);
     }
 }

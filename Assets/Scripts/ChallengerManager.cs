@@ -29,6 +29,8 @@ public class ChallengerManager : MonoBehaviour
 
         currentChallenger = challengers[LevelManager.Instance.level];
         currentChallenger.gameObject.SetActive(true);
+
+        wallSoundInstance = RuntimeManager.CreateInstance(wallSound);
     }
 
     public void CheckInterruptFight()
@@ -43,6 +45,8 @@ public class ChallengerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(7f);
 
+        wallSoundInstance.start();
+
         DestroyWall.Instance.Destroy();
 
         currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -54,5 +58,6 @@ public class ChallengerManager : MonoBehaviour
 
         currentChallenger = carChallenger;
         currentChallenger.musicSoundInstance.start();
+        currentChallenger.Fight();
     }
 }

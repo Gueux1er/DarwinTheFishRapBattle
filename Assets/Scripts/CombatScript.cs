@@ -67,7 +67,7 @@ public class CombatScript : MonoBehaviour
     {
         ChallengerManager.Instance.CheckInterruptFight();
 
-        currentChallenger.Fight();
+        ChallengerManager.Instance.currentChallenger.Fight();
 
         newChallengerCanvasGroup.DOFade(0, 0.3f);
         DOTween.To(() => colorGrading.postExposure.value, x => colorGrading.postExposure.value = x, 0, 0.3f).SetDelay(0.3f)
