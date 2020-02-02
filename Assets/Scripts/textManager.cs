@@ -115,6 +115,7 @@ public class textManager : Singleton<textManager>
             nextWord = false;
             multiplicator += multiplicatorSpeed;
             cS.slider.fillAmount += basePoints * multiplicator;
+            cS.handleSlider.value += basePoints * multiplicator;
         }
         else
         {
