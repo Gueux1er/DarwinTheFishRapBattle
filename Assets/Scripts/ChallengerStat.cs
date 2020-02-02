@@ -20,7 +20,7 @@ public class ChallengerStat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        musicSoundInstance = RuntimeManager.CreateInstance(musicSound);
     }
 
     // Update is called once per frame

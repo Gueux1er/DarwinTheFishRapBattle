@@ -23,7 +23,7 @@ public class MovementCharacter : MonoBehaviour
     [EventRef]
     public string questionsSound;
 
-    private EventInstance newChallengerSoundInstance;
+    public EventInstance newChallengerSoundInstance;
     private EventInstance questionsSoundInstance;
 
     // Start is called before the first frame update
@@ -45,7 +45,7 @@ public class MovementCharacter : MonoBehaviour
             if (canMove == true)
                 Move();
         }
-        else
+        else if (inFight)
         {
             cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f;
             cS.handleSlider.value -= challengerInfos.powerFlow * 0.001f;
@@ -75,8 +75,6 @@ public class MovementCharacter : MonoBehaviour
             challengerInfos = collision.transform.GetComponent<ChallengerStat>();
             CombatSetup(true);
 
-            newChallengerSoundInstance.start();
-
             StopSoundQuestion();
         }
     }
@@ -84,7 +82,7 @@ public class MovementCharacter : MonoBehaviour
     public void CombatSetup(bool changePosition)
     {
         combatUI.SetActive(true);
-        cS.StartFight(challengerInfos.name, challengerInfos.flavorText, challengerInfos.spriteToDisplay,changePosition, challengerInfos);
+        cS.StartFight(challengerInfos.name, challengerInfos.flavorText, challengerInfos.spriteToDisplay,changePosition);
     }
 
     public void StartSoundQuestion()
