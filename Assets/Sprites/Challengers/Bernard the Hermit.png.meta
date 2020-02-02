@@ -130,7 +130,7 @@ TextureImporter:
         width: 1791.25
         height: 1800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,8 +150,8 @@ TextureImporter:
         y: 0
         width: 1791.25
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56010175, y: 0.49762627}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,8 +171,8 @@ TextureImporter:
         y: 0
         width: 1791.25
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.533042, y: 0.507588}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,8 +192,8 @@ TextureImporter:
         y: 0
         width: 1791.25
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47892398, y: 0.5288735}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,8 +213,8 @@ TextureImporter:
         y: 0
         width: 1791.25
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5584591, y: 0.507588}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,12 +230,12 @@ TextureImporter:
       name: Bernard the Hermit_5
       rect:
         serializedVersion: 2
-        x: 8955
+        x: 8964
         y: 0
-        width: 1791.25
+        width: 1791
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5584678, y: 0.50179}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,12 +251,12 @@ TextureImporter:
       name: Bernard the Hermit_6
       rect:
         serializedVersion: 2
-        x: 10746
+        x: 10755
         y: 0
-        width: 1791.25
+        width: 1791
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51271003, y: 0.50505865}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,8 +276,8 @@ TextureImporter:
         y: 0
         width: 1791.25
         height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54321027, y: 0.50431937}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

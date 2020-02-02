@@ -6,7 +6,7 @@ using FMODUnity;
 using EventInstance = FMOD.Studio.EventInstance;
 using RuntimeManager = FMODUnity.RuntimeManager;
 
-public class textManager : Singleton<textManager>
+public class textManager : MonoBehaviour
 {
     bool godMode = false;
 
@@ -25,6 +25,7 @@ public class textManager : Singleton<textManager>
 
     [SerializeField] CombatScript cS;
     [SerializeField] ExcelLecteur eL;
+    [SerializeField] MovementCharacter mC;
 
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject looseCanvas;
@@ -42,6 +43,7 @@ public class textManager : Singleton<textManager>
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        GetAllRef();
         validSoundInstance = RuntimeManager.CreateInstance(validSound);
         errorSoundInstance = RuntimeManager.CreateInstance(errorSound);
 
@@ -49,7 +51,7 @@ public class textManager : Singleton<textManager>
         new WaitForEndOfFrame();
         while (true)
         {
-            if (preText.text.Length < 25)
+            if (preText.text.Length < 35)
             {
                 preText.text += " " + eL.darwinPunchLines[Random.Range(0, eL.darwinPunchLines.Length - 1)];
                 //punchLines.RemoveAt(count);
@@ -61,16 +63,27 @@ public class textManager : Singleton<textManager>
         }
     }
 
-    
+    void GetAllRef()
+    {
+        /*preText = GameObject.Find("Partie Non Fini").GetComponent<Text>();
+        wordInProduction = GameObject.Find("Partie Mot Fini").GetComponent<Text>();
+        cS = GameObject.Find("CanvasCBT").GetComponent<CombatScript>();
+        eL = GameObject.Find("ExcelManager").GetComponent<ExcelLecteur>();
+        mC = GameObject.Find("Avatar").GetComponent<MovementCharacter>();
+        looseCanvas = GameObject.Find("DefeatCanvas");*/
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         if (cS.slider.fillAmount == 0)
         {
             YouLoose();
-        }else if (cS.slider.fillAmount == 1)
+        }
+        if (cS.slider.fillAmount >= 0.95)
         {
+            print("win");
             YouWin();
         }
 
@@ -88,15 +101,21 @@ public class textManager : Singleton<textManager>
 
     void YouWin()
     {
-        ChallengerManager.Instance.currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        ChallengerManager.Instance.currentChallenger.Die();
-
-        MovementCharacter.Instance.StartSoundQuestion();
+        if (ChallengerManager.Instance.currentChallenger != null)
+        {
+            ChallengerManager.Instance.currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            ChallengerManager.Instance.currentChallenger.Die();
+            mC.inFight = false;
+            mC.prepareFight = false;
+            MovementCharacter.Instance.StartSoundQuestion();
+            cS.slider.fillAmount = 0.5f;
+            cS.gameObject.SetActive(false);
+        }
     }
 
     void YouLoose()
     {
-        cS.slider.fillAmount = 0.95f;
+        cS.slider.fillAmount = 0.5f;
         cS.gameObject.SetActive(false);
         looseCanvas.SetActive(true);
     }

@@ -137,7 +137,7 @@ MonoBehaviour:
   interrupt: 1
   musicSound: event:/Musiques/Bernard
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 6
+  powerFlow: 1
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
 --- !u!1 &1116702329974015808
@@ -564,7 +564,7 @@ MonoBehaviour:
   interrupt: 0
   musicSound: event:/Musiques/Carpenter Slug
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 3
+  powerFlow: 1.5
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
 --- !u!1 &4444524121654311154
@@ -584,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4757556878113215050
 Transform:
   m_ObjectHideFlags: 0
@@ -628,14 +628,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: THE CAR
   flavorText: '*VAHOOOOOUUUUUUUMMM*'
-  spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
-    type: 3}
+  spriteToDisplay: {fileID: 21300000, guid: 4478203a9875ae5409a7546bcd52a242, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: e4babdeac0c7d0b4d98497a1455fdf3a,
     type: 3}
   interrupt: 0
   musicSound: event:/Musiques/THE CAR
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 9
+  powerFlow: 2
   entryCarObject: {fileID: 3952455007797080713}
   idleCarObject: {fileID: 1091268798885635624}
 --- !u!1001 &3952455007797048355

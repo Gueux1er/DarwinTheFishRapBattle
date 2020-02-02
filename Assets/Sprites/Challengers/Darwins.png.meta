@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: bfb9cc4865945c84f8024145ff2f2d4c
+guid: cc564523489ace44e9e033049c78ecf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7056509154416059478
-    second: Kaariscargot_0
+      213: -3217187594163403303
+    second: Darwins_0
   - first:
-      213: 1543109941352946979
-    second: Kaariscargot_1
+      213: 8284956738256399757
+    second: Darwins_1
   - first:
-      213: 3484580129833033007
-    second: Kaariscargot_2
+      213: 8672586352581666234
+    second: Darwins_2
   - first:
-      213: 7040294704387593342
-    second: Kaariscargot_3
+      213: -2219308208428198682
+    second: Darwins_3
+  - first:
+      213: 3008175943961797250
+    second: Darwins_4
+  - first:
+      213: -6790614498606338294
+    second: Darwins_5
+  - first:
+      213: 5296525226444908926
+    second: Darwins_6
+  - first:
+      213: 5720819779697098499
+    second: Darwins_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,85 +122,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kaariscargot_0
+      name: Darwins_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1791.25
-        height: 1800
+        x: 328
+        y: 369
+        width: 1282
+        height: 1124
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dbdb1942ee45c54889398ec2468d9ae
-      internalID: 7056509154416059478
+      spriteID: 338ba7b51cf199341936253fad1c3a2d
+      internalID: -3217187594163403303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kaariscargot_1
+      name: Darwins_1
       rect:
         serializedVersion: 2
-        x: 1791
-        y: 0
-        width: 1791.25
-        height: 1800
-      alignment: 9
-      pivot: {x: 0.55434406, y: 0.4979201}
+        x: 2233
+        y: 380
+        width: 1282
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e09b552ea3c1594394bfe97d431fa63
-      internalID: 1543109941352946979
+      spriteID: 74afa6fd1bf9e61498c875fd13ab7c9d
+      internalID: 8284956738256399757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kaariscargot_2
+      name: Darwins_2
       rect:
         serializedVersion: 2
-        x: 3582
-        y: 0
-        width: 1791.25
-        height: 1800
-      alignment: 9
-      pivot: {x: 0.52717227, y: 0.49584016}
+        x: 3937
+        y: 376
+        width: 1282
+        height: 1137
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471a3fab3ea7d6740b2a494416a3da14
-      internalID: 3484580129833033007
+      spriteID: 7ddfb077763a02148b2c4f2e8eb4c066
+      internalID: 8672586352581666234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kaariscargot_3
+      name: Darwins_3
       rect:
         serializedVersion: 2
-        x: 5373
-        y: 0
-        width: 1791.25
-        height: 1800
-      alignment: 9
-      pivot: {x: 0.5501638, y: 0.48336014}
+        x: 5742
+        y: 387
+        width: 1282
+        height: 1222
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0a0b8ae69f34f7419b67ca76f7717da
-      internalID: 7040294704387593342
+      spriteID: 067a91d8c15cdd942a8053c03d877a3c
+      internalID: -2219308208428198682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Darwins_4
+      rect:
+        serializedVersion: 2
+        x: 6362
+        y: 339
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e1088f7d212e643af882296034779e
+      internalID: 3008175943961797250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Darwins_5
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 313
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a0c31f40a6e2f42a48803f527ee983
+      internalID: -6790614498606338294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Darwins_6
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 245
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b900ca821de6d89428050215d92245b0
+      internalID: 5296525226444908926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Darwins_7
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 224
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0396e3b6210df3048b8f16b15acd41f9
+      internalID: 5720819779697098499
       vertices: []
       indices: 
       edges: []
@@ -196,7 +292,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 00a75c365dfa21b45bd6f35a31d72c22
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

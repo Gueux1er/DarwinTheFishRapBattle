@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     public int level;
     public CanvasGroup fadeCanvas;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (Instance != null)
             Destroy(gameObject);

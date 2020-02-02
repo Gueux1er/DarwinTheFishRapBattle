@@ -43,7 +43,7 @@ public class ChallengerManager : MonoBehaviour
 
     IEnumerator TimerInterruption()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
 
         wallSoundInstance.start();
 
@@ -53,8 +53,11 @@ public class ChallengerManager : MonoBehaviour
 
         carChallenger.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
+
         currentChallenger.Die();
+
+        yield return new WaitForSeconds(1.5f);
 
         currentChallenger = carChallenger;
         currentChallenger.musicSoundInstance.start();
