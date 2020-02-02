@@ -8,6 +8,8 @@ using RuntimeManager = FMODUnity.RuntimeManager;
 
 public class textManager : MonoBehaviour
 {
+    public static textManager Instance;
+
     bool godMode = false;
 
     [SerializeField] Text preText;
@@ -39,6 +41,11 @@ public class textManager : MonoBehaviour
     private EventInstance errorSoundInstance;
 
     bool nextWord = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -99,18 +106,21 @@ public class textManager : MonoBehaviour
         }
     }
 
-    void YouWin()
+    public void YouWin(bool startSoundQuestion = true)
     {
         if (ChallengerManager.Instance.currentChallenger != null)
         {
             ChallengerManager.Instance.currentChallenger.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             ChallengerManager.Instance.currentChallenger.Die();
-            mC.inFight = false;
-            mC.prepareFight = false;
-            MovementCharacter.Instance.StartSoundQuestion();
-            cS.slider.fillAmount = 0.5f;
-            cS.gameObject.SetActive(false);
         }
+
+        if (startSoundQuestion)
+            MovementCharacter.Instance.StartSoundQuestion();
+
+        mC.inFight = false;
+        mC.prepareFight = false;
+        cS.slider.fillAmount = 0.5f;
+        cS.gameObject.SetActive(false);
     }
 
     void YouLoose()
@@ -156,7 +166,7 @@ public class textManager : MonoBehaviour
             nextWord = false;
             multiplicator += multiplicatorSpeed;
             cS.slider.fillAmount += basePoints * multiplicator;
-            cS.handleSlider.value += basePoints * multiplicator;
+            cS.handleSlider.value = cS.slider.fillAmount;
             validSoundInstance.start();
         }
         else

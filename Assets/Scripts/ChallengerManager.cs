@@ -59,6 +59,8 @@ public class ChallengerManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        textManager.Instance.YouWin(false);
+
         currentChallenger = carChallenger;
         currentChallenger.musicSoundInstance.start();
         currentChallenger.Fight();
