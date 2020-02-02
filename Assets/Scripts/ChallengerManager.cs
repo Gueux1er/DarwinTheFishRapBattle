@@ -4,6 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using EventInstance = FMOD.Studio.EventInstance;
 using RuntimeManager = FMODUnity.RuntimeManager;
+using UnityEngine.SceneManagement;
 
 public class ChallengerManager : MonoBehaviour
 {
@@ -26,10 +27,15 @@ public class ChallengerManager : MonoBehaviour
         {
             challengers[i].gameObject.SetActive(false);
         }
-
-        currentChallenger = challengers[LevelManager.Instance.level];
-        currentChallenger.gameObject.SetActive(true);
-
+        if (challengers.Count > LevelManager.Instance.level)
+        {
+            currentChallenger = challengers[LevelManager.Instance.level];
+            currentChallenger.gameObject.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
         wallSoundInstance = RuntimeManager.CreateInstance(wallSound);
     }
 
