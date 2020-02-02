@@ -62,7 +62,5 @@ public class ChallengerManager : MonoBehaviour
         textManager.Instance.YouWin(false);
 
         currentChallenger = carChallenger;
-        currentChallenger.musicSoundInstance.start();
-        currentChallenger.Fight();
     }
 }
