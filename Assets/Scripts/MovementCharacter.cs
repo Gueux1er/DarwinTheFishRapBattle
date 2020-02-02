@@ -49,7 +49,7 @@ public class MovementCharacter : MonoBehaviour
         }
         else if (inFight)
         {
-            cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f;
+            cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f*0.5f;
             cS.handleSlider.value = cS.slider.fillAmount;
 
             ChallengerManager.Instance.currentChallenger.musicSoundInstance.setParameterValue("Parameter 1", cS.handleSlider.value);

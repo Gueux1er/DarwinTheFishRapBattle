@@ -53,9 +53,11 @@ public class ChallengerStat : MonoBehaviour
 
     IEnumerator CatchlinesCoco()
     {
-        while(true)
+        ChallengerManager.Instance.EnableOneCatchline();
+
+        while (true)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(6f);
 
             ChallengerManager.Instance.DisableOnCatchlines();
             ChallengerManager.Instance.EnableOneCatchline();

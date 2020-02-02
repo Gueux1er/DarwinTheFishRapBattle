@@ -165,7 +165,7 @@ public class textManager : MonoBehaviour
             preText.text = preText.text.Substring(1);
             nextWord = false;
             multiplicator += multiplicatorSpeed;
-            cS.slider.fillAmount += basePoints * multiplicator;
+            cS.slider.fillAmount += basePoints * multiplicator*0.5f;
             cS.handleSlider.value = cS.slider.fillAmount;
             validSoundInstance.start();
         }

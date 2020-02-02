@@ -6,6 +6,7 @@ using EventInstance = FMOD.Studio.EventInstance;
 using RuntimeManager = FMODUnity.RuntimeManager;
 using UnityEngine.SceneManagement;
 using TMPro;
+using DG.Tweening;
 
 public class ChallengerManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class ChallengerManager : MonoBehaviour
 
     public ChallengerStat carChallenger;
 
-    public List<TextMeshPro> punchlinesText;
+    public TextMeshPro punchlinesText;
 
     [EventRef]
     public string wallSound;
@@ -55,16 +56,16 @@ public class ChallengerManager : MonoBehaviour
 
     public void DisableOnCatchlines()
     {
-        for(int i = 0; i < punchlinesText.Count; ++i)
-        {
-            punchlinesText[i].text = string.Empty;
-        }
+        punchlinesText.text = string.Empty;
     }
 
     public void EnableOneCatchline()
     {
-        punchlinesText[Random.Range(0, punchlinesText.Count)].text =
+        punchlinesText.color = Color.white;
+        punchlinesText.text =
             ExcelLecteur.Instance.currentPunchLines[Random.Range(0, ExcelLecteur.Instance.currentPunchLines.Length)];
+
+        punchlinesText.DOColor(Color.clear, 1f).SetDelay(4.5f);
     }
 
     IEnumerator TimerInterruption()

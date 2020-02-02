@@ -497,8 +497,7 @@ MonoBehaviour:
   - {fileID: 1116702329702656729}
   currentChallenger: {fileID: 0}
   carChallenger: {fileID: 229290274080255399}
-  punchlinesText:
-  - {fileID: 2781553144155947627}
+  punchlinesText: {fileID: 2781553144155947627}
   wallSound: event:/Effets sonores/MUR
 --- !u!1 &1116702330852299255
 GameObject:
@@ -667,18 +666,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5249959783700553248}
-  m_LocalRotation: {x: -0, y: -0, z: -0.036203448, w: 0.99934447}
-  m_LocalPosition: {x: 0, y: 0, z: -5.74}
+  m_LocalRotation: {x: 0.14749138, y: -0.0053431992, z: -0.03580698, w: 0.9884006}
+  m_LocalPosition: {x: 0, y: 0, z: -6.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5870197926949321815}
   m_Father: {fileID: 1116702330478320124}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.15}
+  m_LocalEulerAnglesHint: {x: 16.929, y: -1.2650001, z: -4.3380003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.91, y: -0.29}
-  m_SizeDelta: {x: 15, y: 5}
+  m_AnchoredPosition: {x: -1.88, y: 0.21}
+  m_SizeDelta: {x: 8, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7562252220727769268
 MeshRenderer:
@@ -752,8 +751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "J'nage, j'nage et la nuit, je d\xE9foule contre tes ex. Clap, clap, c'est
-    le bruit d'mes nageoires contre tes fesses! "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 97186917440420c47929842725c3769d, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: bca296f8d13191a44bbf631e99039078, type: 2}
@@ -762,8 +760,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287269606
-  m_fontColor: {r: 0.9056604, g: 0.54254186, b: 0.54254186, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -781,8 +779,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -822,13 +820,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2781553144155947627}
-    characterCount: 115
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 20
-    wordCount: 20
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 3
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
