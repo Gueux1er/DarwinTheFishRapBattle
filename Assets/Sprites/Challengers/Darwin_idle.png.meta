@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: cc564523489ace44e9e033049c78ecf2
+guid: 81d786cd4dba9e3459eae7dfec1ef8fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3217187594163403303
-    second: Darwins_0
+      213: 2012754525431401605
+    second: Darwin_idle_0
   - first:
-      213: 8284956738256399757
-    second: Darwins_1
+      213: 3982635701993284162
+    second: Darwin_idle_1
   - first:
-      213: 8672586352581666234
-    second: Darwins_2
+      213: 1764011673794948318
+    second: Darwin_idle_2
   - first:
-      213: -2219308208428198682
-    second: Darwins_3
-  - first:
-      213: 3008175943961797250
-    second: Darwins_4
-  - first:
-      213: -6790614498606338294
-    second: Darwins_5
-  - first:
-      213: 5296525226444908926
-    second: Darwins_6
-  - first:
-      213: 5720819779697098499
-    second: Darwins_7
+      213: -276868220619688795
+    second: Darwin_idle_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Darwins_0
+      name: Darwin_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9969a6f7ed1dfff4a8bcd1c2ced9ec64
-      internalID: -3217187594163403303
+      spriteID: bde0513c563caa547a3afb68afd2ffdb
+      internalID: 2012754525431401605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Darwins_1
+      name: Darwin_idle_1
       rect:
         serializedVersion: 2
         x: 1897
         y: 0
-        width: 1897
+        width: 1897.25
         height: 1800
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -157,35 +145,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 314a0dc2ea63193448e45131642e3a5f
-      internalID: 8284956738256399757
+      spriteID: e065b6f183d1be2488f13cd1a47c25d7
+      internalID: 3982635701993284162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Darwins_2
+      name: Darwin_idle_2
       rect:
         serializedVersion: 2
-        x: 3798
+        x: 3794
         y: 0
-        width: 1897
+        width: 1897.25
         height: 1800
       alignment: 9
-      pivot: {x: 0.42529348, y: 0.50000006}
+      pivot: {x: 0.43697497, y: 0.5049208}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc6e3f0ed0609e46a69acebcfd0ca78
-      internalID: 8672586352581666234
+      spriteID: 95c1d2184a158a24e9a69c287cc50666
+      internalID: 1764011673794948318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Darwins_3
+      name: Darwin_idle_3
       rect:
         serializedVersion: 2
         x: 5691
@@ -193,14 +181,14 @@ TextureImporter:
         width: 1897.25
         height: 1800
       alignment: 9
-      pivot: {x: 0.38562083, y: 0.5073812}
+      pivot: {x: 0.45564896, y: 0.5024604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33573c52544e5e42bed19aef8f79dfd
-      internalID: -2219308208428198682
+      spriteID: e820395c831c01a4b850b8944bd8fdcb
+      internalID: -276868220619688795
       vertices: []
       indices: 
       edges: []

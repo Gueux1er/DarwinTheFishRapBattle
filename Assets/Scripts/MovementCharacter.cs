@@ -18,6 +18,8 @@ public class MovementCharacter : MonoBehaviour
     [HideInInspector] public bool prepareFight = false;
     [HideInInspector] public bool canMove = false;
 
+    public Animator animator;
+
     [EventRef]
     public string newChallengerSound;
     [EventRef]
@@ -87,11 +89,13 @@ public class MovementCharacter : MonoBehaviour
 
     public void StartSoundQuestion()
     {
+        animator.SetBool("Idle", false);
         questionsSoundInstance.start();
     }
 
     public void StopSoundQuestion()
     {
+        animator.SetBool("Idle", true);
         questionsSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
