@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
         LevelManager.Instance.fadeCanvas.alpha = 0;
         LevelManager.Instance.fadeCanvas.DOFade(1, 2f)
             .OnComplete(() => {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
 
             });
 
