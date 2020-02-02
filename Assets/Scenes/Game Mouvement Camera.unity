@@ -1935,6 +1935,11 @@ PrefabInstance:
       propertyPath: movementCharacter
       value: 
       objectReference: {fileID: 1777396708}
+    - target: {fileID: 5142753339550403308, guid: 7c6e97c91cf48774d92c347d9b212421,
+        type: 3}
+      propertyPath: cS
+      value: 
+      objectReference: {fileID: 578612023}
     - target: {fileID: 5142753339550403309, guid: 7c6e97c91cf48774d92c347d9b212421,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4767,6 +4772,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 229290274080255399, guid: 05a4537073392d74a8b7282f10c9b6f8,
+        type: 3}
+      propertyPath: powerFlow
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116702329414703813, guid: 05a4537073392d74a8b7282f10c9b6f8,
+        type: 3}
+      propertyPath: powerFlow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116702329702656729, guid: 05a4537073392d74a8b7282f10c9b6f8,
+        type: 3}
+      propertyPath: powerFlow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1116702330478320003, guid: 05a4537073392d74a8b7282f10c9b6f8,
         type: 3}
       propertyPath: m_Name
