@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PerfectTextManager : MonoBehaviour
 {
@@ -35,8 +36,10 @@ public class PerfectTextManager : MonoBehaviour
 
     void CompareKeyPressedToText(string textToCompare)
     {
+        print(textToCheck.Length);
         for (int i = 0; i < textToCheck.Length; i++)
         {
+            print(i);
             if (textToCompare.ToLower()[0] == textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text.ToLower()[0])
             {
                 textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text = "<color=green>" + textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text + "</color>";
@@ -76,10 +79,15 @@ public class PerfectTextManager : MonoBehaviour
         else if (textSend == "Abandon")
         {
             Application.Quit();
+        }else if (textSend == "PRESS START")
+        {
+            print("Launch other");
+            SceneManager.LoadScene(1);
         }
 
 
 
-        textSend = "";
+
+        //textSend = "";
     }
 }
