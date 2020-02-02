@@ -5031,24 +5031,14 @@ MonoBehaviour:
   preText: {fileID: 844989239}
   wordInProduction: {fileID: 1804022934}
   keyPressed: 
-  punchLines:
-  - "Ta m\xE8re en slip."
-  - Mange tes grands morts.
-  - Nique la poiscailles.
-  - Regarde mon gros bigorneau.
-  - chocolat paprika.
-  - efzegfdgreg.
-  - yeah Boy.
-  - Salope!
-  - Gabi sait pas faire de son.
-  - Victor est nul.
   possibleEndOfPunchLines:
   - .
   - '!'
   multiplicator: 1
-  multiplicatorSpeed: 0.25
+  multiplicatorSpeed: 0.1
   basePoints: 0.02
   cS: {fileID: 578612023}
+  eL: {fileID: 1972133402}
   victoryCanvas: {fileID: 0}
   looseCanvas: {fileID: 969397558}
   validSound: event:/Effets sonores/Keyboard

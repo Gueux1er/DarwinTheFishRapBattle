@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ExcelLecteur : MonoBehaviour
 {
-    [SerializeField] string[] darwinPunchLines;
+    public string[] darwinPunchLines;
     [SerializeField] string[] kaariscargotPunchlines;
     [SerializeField] string[] carpenterSlugPunchlines;
     [SerializeField] string[] theCarPunchLines;
@@ -13,6 +13,9 @@ public class ExcelLecteur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TextAsset darwinPunchLinesLector = Resources.Load<TextAsset>("darwinPunchLines");
+        darwinPunchLines = darwinPunchLinesLector.text.Split(new char[] { '\n' });
+
         TextAsset PunchlinesKaaris = Resources.Load<TextAsset>("KaariscargotPunchlines");
         kaariscargotPunchlines = PunchlinesKaaris.text.Split(new char[] { '\n' });
 
@@ -22,8 +25,7 @@ public class ExcelLecteur : MonoBehaviour
         TextAsset PunchlinesTheCar = Resources.Load<TextAsset>("theCarPunchLines");
         theCarPunchLines = PunchlinesTheCar.text.Split(new char[] { '\n' });
 
-        TextAsset darwinPunchLinesLector = Resources.Load<TextAsset>("darwinPunchLines");
-        darwinPunchLines = darwinPunchLinesLector.text.Split(new char[] { '\n' });
+        
     }
 
     // Update is called once per frame
