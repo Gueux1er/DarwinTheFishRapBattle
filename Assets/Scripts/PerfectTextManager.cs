@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+using FMODUnity;
+using EventInstance = FMOD.Studio.EventInstance;
+using RuntimeManager = FMODUnity.RuntimeManager;
 
 public class PerfectTextManager : MonoBehaviour
 {
@@ -16,10 +20,15 @@ public class PerfectTextManager : MonoBehaviour
     [SerializeField] MovementCharacter movementCharacter;
     [SerializeField] CombatScript cS;
 
+    [EventRef]
+    public string validSound;
+
+    private EventInstance validSoundInstance;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        validSoundInstance = RuntimeManager.CreateInstance(validSound);
     }
 
     // Update is called once per frame
@@ -41,14 +50,32 @@ public class PerfectTextManager : MonoBehaviour
         for (int i = 0; i < textToCheck.Length; i++)
         {
             print(i);
-            if (textToCompare.ToLower()[0] == textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text.ToLower()[0])
+            if (textToCheck[i].transform.GetChild(i).GetComponent<Text>() != null &&
+                textToCompare.ToLower()[0] == textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text.ToLower()[0])
             {
                 textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text = "<color=green>" + textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<Text>().text + "</color>";
+
+                goodPart[i] += 1;
+
+                if (goodPart[i] == textToCheck[i].transform.childCount)
+                {
+                    textSend = textToCheck[i].name;
+                }
+
+                validSoundInstance.start();
+            }
+            else if (textToCheck[i].transform.GetChild(i).GetComponent<TextMeshProUGUI>() != null &&
+                textToCompare.ToLower()[0] == textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<TextMeshProUGUI>().text.ToLower()[0])
+            {
+                textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<TextMeshProUGUI>().text = "<color=green>" + textToCheck[i].transform.GetChild(goodPart[i]).GetComponent<TextMeshProUGUI>().text + "</color>";
+
                 goodPart[i] += 1;
                 if (goodPart[i] == textToCheck[i].transform.childCount)
                 {
                     textSend = textToCheck[i].name;
                 }
+
+                validSoundInstance.start();
             }
         }
     }
@@ -59,7 +86,10 @@ public class PerfectTextManager : MonoBehaviour
         {
             for (int j=0; j < textToCheck[i].transform.childCount -1; j++)
             {
-                textToCheck[i].transform.GetChild(j).GetComponent<Text>().text = textToCheck[i].transform.GetChild(j).name;
+                if (textToCheck[i].transform.GetChild(j).GetComponent<Text>() != null)
+                    textToCheck[i].transform.GetChild(j).GetComponent<Text>().text = textToCheck[i].transform.GetChild(j).name;
+                else if (textToCheck[i].transform.GetChild(j).GetComponent<TextMeshProUGUI>() != null)
+                    textToCheck[i].transform.GetChild(j).GetComponent<TextMeshProUGUI>().text = textToCheck[i].transform.GetChild(j).name;
             }
         }
         for (int i = 0; i < goodPart.Length; i++)
@@ -78,7 +108,7 @@ public class PerfectTextManager : MonoBehaviour
         else if (textSend == "Abandon")
         {
             Application.Quit();
-        }else if (textSend == "PRESS START")
+        }else if (textSend == "START")
         {
             print("Launch other");
             SceneManager.LoadScene(1);
