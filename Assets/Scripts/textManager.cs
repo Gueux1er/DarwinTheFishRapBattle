@@ -96,7 +96,7 @@ public class textManager : MonoBehaviour
 
 
 
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && mC.inFight)
             if (Input.inputString != "")
                 CompareKeyPressedToText(Input.inputString);
 
@@ -128,6 +128,9 @@ public class textManager : MonoBehaviour
         cS.slider.fillAmount = 0.5f;
         cS.gameObject.SetActive(false);
         looseCanvas.SetActive(true);
+        mC.inFight = false;
+
+        ChallengerManager.Instance.currentChallenger.StopPunchLines();
     }
 
     void CheckForEndOfPunchLines()

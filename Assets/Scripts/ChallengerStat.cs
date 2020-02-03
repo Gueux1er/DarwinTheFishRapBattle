@@ -51,6 +51,12 @@ public class ChallengerStat : MonoBehaviour
         StartCoroutine(CatchlinesCoco());
     }
 
+    public void StopPunchLines()
+    {
+        StopCoroutine(CatchlinesCoco());
+        ChallengerManager.Instance.DisableOnCatchlines();
+    }
+
     IEnumerator CatchlinesCoco()
     {
         ChallengerManager.Instance.EnableOneCatchline();
@@ -61,6 +67,12 @@ public class ChallengerStat : MonoBehaviour
 
             ChallengerManager.Instance.DisableOnCatchlines();
             ChallengerManager.Instance.EnableOneCatchline();
+
+            if (!MovementCharacter.Instance.inFight)
+            {
+                ChallengerManager.Instance.DisableOnCatchlines();
+                yield break;
+            }
         }
     }
 
