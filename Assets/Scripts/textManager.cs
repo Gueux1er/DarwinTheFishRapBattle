@@ -22,7 +22,7 @@ public class textManager : MonoBehaviour
 
     int count;
     [SerializeField] float multiplicator = 1;
-    [SerializeField] float multiplicatorSpeed = 0.25f;
+    [SerializeField] float multiplicatorSpeed = 0.1f;
     [SerializeField] float basePoints;
 
     [SerializeField] CombatScript cS;
@@ -182,9 +182,9 @@ public class textManager : MonoBehaviour
             errorSoundInstance.start();
         }
 
-        if (multiplicator > 2)
+        if (multiplicator > 5)
         {
-            multiplicator = 2f;
+            multiplicator = 5f;
         }
 
         CheckForLenghtOfText();
