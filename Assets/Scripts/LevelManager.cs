@@ -35,9 +35,11 @@ public class LevelManager : MonoBehaviour
     {
         LevelManager.Instance.fadeCanvas.alpha = 0;
         LevelManager.Instance.fadeCanvas.DOFade(1, 2f)
-            .OnComplete(() => {
+            .OnComplete(() =>
+            {
+                ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                MovementCharacter.Instance.StopSoundQuestion();
                 SceneManager.LoadScene(1);
-
             });
 
     }

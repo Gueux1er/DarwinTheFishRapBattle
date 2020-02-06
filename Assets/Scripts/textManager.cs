@@ -168,7 +168,7 @@ public class textManager : MonoBehaviour
             preText.text = preText.text.Substring(1);
             nextWord = false;
             multiplicator += multiplicatorSpeed;
-            cS.slider.fillAmount += basePoints * multiplicator*0.5f;
+            cS.slider.fillAmount += !ChallengerManager.Instance.currentChallenger.name.Contains("BERNARD") ? basePoints * multiplicator * 0.5f : basePoints * multiplicator * 0.15f;
             cS.handleSlider.value = cS.slider.fillAmount;
             validSoundInstance.start();
         }

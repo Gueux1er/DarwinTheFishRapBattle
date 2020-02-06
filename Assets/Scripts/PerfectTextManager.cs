@@ -103,6 +103,7 @@ public class PerfectTextManager : MonoBehaviour
         if (textSend == "Retry")
         {
             ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            MovementCharacter.Instance.StopSoundQuestion();
             SceneManager.LoadScene(1);
         }
         else if (textSend == "Abandon")

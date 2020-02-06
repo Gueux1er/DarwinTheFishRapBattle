@@ -52,7 +52,10 @@ public class Voiture : MonoBehaviour {
 			if (VoitureFBX.transform.position.z >= 900) {
 				fadeImage.color = new Color (fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, fadeImage.color.a + 0.01f);
 
-				if (fadeImage.color.a >= 1) {
+				if (fadeImage.color.a >= 1)
+				{
+					ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+					MovementCharacter.Instance.StopSoundQuestion();
 					SceneManager.LoadScene (2);
 				}
 			}

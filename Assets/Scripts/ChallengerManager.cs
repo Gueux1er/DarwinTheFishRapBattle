@@ -40,8 +40,9 @@ public class ChallengerManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(2);
+            ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             MovementCharacter.Instance.StopSoundQuestion();
+            SceneManager.LoadScene(2);
         }
 
         wallSoundInstance = RuntimeManager.CreateInstance(wallSound);

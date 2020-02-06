@@ -49,7 +49,7 @@ public class MovementCharacter : MonoBehaviour
         }
         else if (inFight)
         {
-            cS.slider.fillAmount -= challengerInfos.powerFlow * 0.001f;
+            cS.slider.fillAmount -= challengerInfos.powerFlow * 0.035f * Time.deltaTime;
             cS.handleSlider.value = cS.slider.fillAmount;
 
             ChallengerManager.Instance.currentChallenger.musicSoundInstance.setParameterValue("Parameter 1", cS.handleSlider.value);
@@ -87,14 +87,22 @@ public class MovementCharacter : MonoBehaviour
         cS.StartFight(challengerInfos.name, challengerInfos.flavorText, challengerInfos.spriteToDisplay,changePosition);
     }
 
+    private bool questionSoundReady;
     public void StartSoundQuestion()
     {
+        if (questionSoundReady)
+            return;
+
+        questionSoundReady = true;
+
         animator.SetBool("Idle", false);
         questionsSoundInstance.start();
     }
 
     public void StopSoundQuestion()
     {
+        questionSoundReady = false;
+
         animator.SetBool("Idle", true);
         questionsSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }

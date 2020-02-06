@@ -99,7 +99,10 @@ public class Deplacement : MonoBehaviour {
 			Avataranimation.transform.localScale = new Vector3 (Avataranimation.transform.localScale.x - 0.01f, Avataranimation.transform.localScale.y - 0.01f, Avataranimation.transform.localScale.z - 0.01f);
 //			fadeImage.DOFade(1, fadeDurationSeconds).SetDelay(delayBeforeFadingIn).SetEase(fadeEase);
 			fadeImage.color = new Color (fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, fadeImage.color.a + 0.01f);
-			if (fadeImage.color.a >= 1) {
+			if (fadeImage.color.a >= 1)
+			{
+				ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				MovementCharacter.Instance.StopSoundQuestion();
 				SceneManager.LoadScene (1);
 			}
 		}
@@ -110,8 +113,9 @@ public class Deplacement : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.R))
 		{
-			SceneManager.LoadScene (0);
 			ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			MovementCharacter.Instance.StopSoundQuestion();
+			SceneManager.LoadScene (0);
 		}
 
 		oneframe = false;
