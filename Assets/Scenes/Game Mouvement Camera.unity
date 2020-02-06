@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d64d6beaae7e984380be8027945b73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 0
   fadeCanvas: {fileID: 976954751}
 --- !u!4 &22809708
 Transform:
