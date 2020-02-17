@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 1116702329702656730}
   - component: {fileID: 1116702329702656729}
   m_Layer: 0
-  m_Name: Bernard the Hermit
+  m_Name: Bernard the Ermit
   m_TagString: Challenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b3cb97a9e542a48a5bcbc9d9546ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: BERNARD THE HERMIT
+  name: BERNARD THE ERMIT
   flavorText: BERNARD BACK FROM THE DEAD
   spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
     type: 3}

@@ -4,28 +4,28 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -7892297509744818168
-    second: Bernard the Hermit_0
+    second: Bernard the Ermit_0
   - first:
       213: -6712661058679762698
-    second: Bernard the Hermit_1
+    second: Bernard the Ermit_1
   - first:
       213: 3892078950021848428
-    second: Bernard the Hermit_2
+    second: Bernard the Ermit_2
   - first:
       213: -183446648978576296
-    second: Bernard the Hermit_3
+    second: Bernard the Ermit_3
   - first:
       213: -1784562337513871060
-    second: Bernard the Hermit_4
+    second: Bernard the Ermit_4
   - first:
       213: 4777491089281680030
-    second: Bernard the Hermit_5
+    second: Bernard the Ermit_5
   - first:
       213: 7137743932950121069
-    second: Bernard the Hermit_6
+    second: Bernard the Ermit_6
   - first:
       213: -4327232853004079951
-    second: Bernard the Hermit_7
+    second: Bernard the Ermit_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bernard the Hermit_0
+      name: Bernard the Ermit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_1
+      name: Bernard the Ermit_1
       rect:
         serializedVersion: 2
         x: 1791
@@ -164,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_2
+      name: Bernard the Ermit_2
       rect:
         serializedVersion: 2
         x: 3582
@@ -185,7 +185,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_3
+      name: Bernard the Ermit_3
       rect:
         serializedVersion: 2
         x: 5373
@@ -206,7 +206,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_4
+      name: Bernard the Ermit_4
       rect:
         serializedVersion: 2
         x: 7164
@@ -227,7 +227,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_5
+      name: Bernard the Ermit_5
       rect:
         serializedVersion: 2
         x: 8964
@@ -248,7 +248,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_6
+      name: Bernard the Ermit_6
       rect:
         serializedVersion: 2
         x: 10755
@@ -269,7 +269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bernard the Hermit_7
+      name: Bernard the Ermit_7
       rect:
         serializedVersion: 2
         x: 12537
