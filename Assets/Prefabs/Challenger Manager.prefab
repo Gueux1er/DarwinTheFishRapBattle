@@ -130,8 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: BERNARD THE ERMIT
   flavorText: BERNARD BACK FROM THE DEAD
-  spriteToDisplay: {fileID: -7892297509744818168, guid: 77570dae74e36af49b2d5028d1e0812c,
-    type: 3}
+  spriteToDisplay: {fileID: 21300000, guid: c228cbb2625028048afc7f39cca9384c, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
     type: 3}
   interrupt: 1
@@ -558,9 +557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: CARPENTER SLUG
-  flavorText: LE CHARPENTIER QUI BRUTALISE LA MER
-  spriteToDisplay: {fileID: -9055229215069550697, guid: 695c55ada21236b40a2894671a49ce8e,
-    type: 3}
+  flavorText: LE CHARPENTIER QUI \n BRUTALISE LA MER
+  spriteToDisplay: {fileID: 21300000, guid: ccda401c93c648340a6ec3cc753b5eb1, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
     type: 3}
   interrupt: 0
@@ -630,7 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: THE CAR
   flavorText: '*VAHOOOOOUUUUUUUMMM*'
-  spriteToDisplay: {fileID: 21300000, guid: 4478203a9875ae5409a7546bcd52a242, type: 3}
+  spriteToDisplay: {fileID: 21300000, guid: 48e228b8bae0a3d4fa66b82e9867afa2, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: e4babdeac0c7d0b4d98497a1455fdf3a,
     type: 3}
   interrupt: 0
@@ -653,7 +651,7 @@ GameObject:
   - component: {fileID: 2042669794454419708}
   - component: {fileID: 2781553144155947627}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Speak Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
