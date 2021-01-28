@@ -800,6 +800,8 @@ MonoBehaviour:
   goodPart: 00000000
   textSend: 
   movementCharacter: {fileID: 0}
+  cS: {fileID: 0}
+  validSound: event:/Effets sonores/Keyboard
 --- !u!4 &2051532122
 Transform:
   m_ObjectHideFlags: 0

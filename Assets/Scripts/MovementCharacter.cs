@@ -36,7 +36,8 @@ public class MovementCharacter : MonoBehaviour
         newChallengerSoundInstance = RuntimeManager.CreateInstance(newChallengerSound);
         questionsSoundInstance = RuntimeManager.CreateInstance(questionsSound);
 
-        StartSoundQuestion();
+        if (ChallengerManager.Instance.challengers.Count > LevelManager.Instance.level)
+            StartSoundQuestion();
     }
 
     // Update is called once per frame
@@ -49,7 +50,12 @@ public class MovementCharacter : MonoBehaviour
         }
         else if (inFight)
         {
-            cS.slider.fillAmount -= challengerInfos.powerFlow * 0.035f * Time.deltaTime;
+            if (cS.slider.fillAmount > 0.7f)
+                cS.slider.fillAmount -= challengerInfos.powerFlow * 0.065f * Time.deltaTime;
+            else if (cS.slider.fillAmount < 0.2f)
+                cS.slider.fillAmount -= challengerInfos.powerFlow * 0.015f * Time.deltaTime;
+            else
+                cS.slider.fillAmount -= challengerInfos.powerFlow * 0.035f * Time.deltaTime;
             cS.handleSlider.value = cS.slider.fillAmount;
 
             ChallengerManager.Instance.currentChallenger.musicSoundInstance.setParameterValue("Parameter 1", cS.handleSlider.value);
@@ -65,7 +71,7 @@ public class MovementCharacter : MonoBehaviour
 
     void Move()
     {
-        this.transform.localPosition += Vector3.right*moveSpeed;
+        this.transform.localPosition += Vector3.right * moveSpeed * Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)

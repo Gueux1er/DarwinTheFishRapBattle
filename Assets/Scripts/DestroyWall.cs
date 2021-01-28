@@ -18,7 +18,7 @@ public class DestroyWall : MonoBehaviour
         for (int i = 0; i < wallsRb.Count; ++i)
         {
             wallsRb[i].isKinematic = false;
-            wallsRb[i].AddForce(Vector3.back * 50 + Vector3.right * Random.Range(-20f, 20f) + Vector3.up * Random.Range(10f, 20f));
+            wallsRb[i].AddForce(Vector3.back * Random.Range(50f, 200f) + Vector3.right * Random.Range(-150f, 150f) + Vector3.up * Random.Range(10f, 100f));
         }
     }
 }

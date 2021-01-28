@@ -60,14 +60,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: KAARISCARGOT
   flavorText: SEVRAN DEBARQUE A LA MER
-  spriteToDisplay: {fileID: 1543109941352946979, guid: bfb9cc4865945c84f8024145ff2f2d4c,
-    type: 3}
+  spriteToDisplay: {fileID: 21300000, guid: 6394af56849bfe344b6f67ca889e3037, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
     type: 3}
   interrupt: 0
   musicSound: event:/Musiques/Karriscargot
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 1.1
+  powerFlow: 1.25
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
 --- !u!1 &1116702329702656735
@@ -136,7 +135,7 @@ MonoBehaviour:
   interrupt: 1
   musicSound: event:/Musiques/Bernard
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 1.3
+  powerFlow: 1.4
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
 --- !u!1 &1116702329974015808
@@ -557,14 +556,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: CARPENTER SLUG
-  flavorText: LE CHARPENTIER QUI \n BRUTALISE LA MER
+  flavorText: LE CHARPENTIER QUI BRUTALISE LA MER
   spriteToDisplay: {fileID: 21300000, guid: ccda401c93c648340a6ec3cc753b5eb1, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: 9145afc10c1168844990175a73f36a25,
     type: 3}
   interrupt: 0
   musicSound: event:/Musiques/Carpenter Slug
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 1.55
+  powerFlow: 1.5
   entryCarObject: {fileID: 0}
   idleCarObject: {fileID: 0}
 --- !u!1 &4444524121654311154
@@ -626,15 +625,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b3cb97a9e542a48a5bcbc9d9546ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: THE CAR
-  flavorText: '*VAHOOOOOUUUUUUUMMM*'
+  name: '  THE CAR'
+  flavorText: '       *VAHOOOOOUUUUUUUMMM*'
   spriteToDisplay: {fileID: 21300000, guid: 48e228b8bae0a3d4fa66b82e9867afa2, type: 3}
   explosionParticlePrefab: {fileID: 8821392633916896886, guid: e4babdeac0c7d0b4d98497a1455fdf3a,
     type: 3}
   interrupt: 0
   musicSound: event:/Musiques/THE CAR
   dieSound: event:/Effets sonores/WIN
-  powerFlow: 1.95
+  powerFlow: 1.8
   entryCarObject: {fileID: 3952455007797080713}
   idleCarObject: {fileID: 1091268798885635624}
 --- !u!1 &5249959783700553248

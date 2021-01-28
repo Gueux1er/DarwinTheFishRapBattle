@@ -97,7 +97,7 @@ public class textManager : MonoBehaviour
 
 
         if (Input.anyKeyDown && mC.inFight)
-            if (Input.inputString != "")
+            if (Input.inputString != "" || Input.inputString != " ")
                 CompareKeyPressedToText(Input.inputString);
 
         if (preText.text[0] == " "[0])
@@ -147,6 +147,7 @@ public class textManager : MonoBehaviour
     void EndOfPunchLines()
     {
         print("EndOfPunchLines");
+        WordFinish();
     }
 
 
@@ -182,9 +183,9 @@ public class textManager : MonoBehaviour
             errorSoundInstance.start();
         }
 
-        if (multiplicator > 5)
+        if (multiplicator > 4)
         {
-            multiplicator = 5f;
+            multiplicator = 4f;
         }
 
         CheckForLenghtOfText();

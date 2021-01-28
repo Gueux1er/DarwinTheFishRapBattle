@@ -23,9 +23,13 @@ public class ChallengerManager : MonoBehaviour
     public string wallSound;
     public EventInstance wallSoundInstance;
 
-    public void Start()
+    public void Awake()
     {
         Instance = this;
+    }
+
+    public void Start()
+    {
 
         carChallenger.gameObject.SetActive(false);
 
@@ -40,9 +44,10 @@ public class ChallengerManager : MonoBehaviour
         }
         else
         {
-            ChallengerManager.Instance.currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            MovementCharacter.Instance.StopSoundQuestion();
+            currentChallenger?.musicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene(2);
+
+            return;
         }
 
         wallSoundInstance = RuntimeManager.CreateInstance(wallSound);
